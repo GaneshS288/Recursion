@@ -10,7 +10,10 @@ function fibs(n) {
   return arr;
 }
 
-function fibsRec(n) {
+/*function fibsRec(n) {
+    console.log("This was printed recursively");
+
+
   if (n === 1) return [0];
   else if (n === 2) return [0, 1];
   else if (n > 2) {
@@ -19,9 +22,20 @@ function fibsRec(n) {
     fibArray[n - 1] = currentFib;
     return fibArray;
   }
+}*/
+
+function fibsRec(n) {
+    console.log("This was printed recursively");
+
+
+  if (n === 1) return [0];
+  else if (n === 2) return [0, 1];
+  let result = fibsRec(n-1);
+  let currentFib = result[n-3] + result[n-2];
+  result.push(currentFib);
+  return result;
 }
 
 console.log(fibsRec(8))
-console.log(fibsRec(15))
 console.log(fibsRec(20))
 
