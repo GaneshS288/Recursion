@@ -15,7 +15,7 @@ function mergeSort(arr) {
         sortedArr = sortedArr.concat(rightArray);
         break;
       }
-      if (leftArray[0] < rightArray[0]) sortedArr.push(leftArray.shift());
+      else if (leftArray[0] < rightArray[0]) sortedArr.push(leftArray.shift());
       else if (leftArray[0] > rightArray[0]) sortedArr.push(rightArray.shift());
       else if (leftArray[0] === rightArray[0])
         sortedArr.push(leftArray.shift());
